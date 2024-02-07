@@ -14,15 +14,15 @@ on:
     types: [created]
 
 permissions:
-  actions: read
-  checks: read
-  contents: none
-  deployments: none
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
   issues: write
-  packages: none
+  packages: write
   pull-requests: write
-  repository-projects: read
-  security-events: none
+  repository-projects: write
+  security-events: write
   statuses: write
   
 jobs:
