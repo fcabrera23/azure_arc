@@ -13,19 +13,22 @@ on:
   pull_request_review_comment:
     types: [created]
 
+permissions:
+  actions: read
+  checks: read
+  contents: none
+  deployments: none
+  issues: write
+  packages: none
+  pull-requests: write
+  repository-projects: read
+  security-events: none
+  statuses: write
+  
 jobs:
   welcome:
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      deployments: read
-      packages: none
-      pull-requests: write
-      issues: write 
-      security-events: read
     steps:
-      - uses: actions/checkout@v1
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
